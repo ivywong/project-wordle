@@ -8,8 +8,7 @@ function GuessResults({ guesses }) {
   return (
     <div className="guess-results">
       {range(NUM_OF_GUESSES_ALLOWED).map((row) => {
-        const guess = guesses.length > row ? guesses[row].guess : '';
-        return <Guess className="guess" key={row} value={guess}></Guess>;
+        return <Guess className="guess" key={row} data={guesses[row]}></Guess>;
       })}
     </div>
   );
